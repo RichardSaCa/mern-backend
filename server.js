@@ -21,7 +21,7 @@ const __dirname = path.resolve();
 
 // Middleware para permitir todos los orígenes
 app.use(cors({
-    origin: 'http://localhost', // Cambia por el dominio de tu frontend
+    origin: 'https://mern-frontend-gdtf.onrender.com', // Cambia por el dominio de tu frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true, // Si usas cookies o autenticación
 }));
