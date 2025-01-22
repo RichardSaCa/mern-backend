@@ -20,11 +20,7 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 // Middleware para permitir todos los orígenes
-app.use(cors({
-    origin: 'https://mern-frontend-gdtf.onrender.com', // Cambia por el dominio de tu frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true, // Si usas cookies o autenticación
-}));
+app.use(cors());
 
 app.use(express.json()); // allows us to accept JSON data in the req.body
 
@@ -39,5 +35,5 @@ app.use("/api/products", productRoutes )
 
 app.listen(5000, () =>{
     connectDB();
-    console.log("Server started at http://localhost:" + PORT);
+    console.log("Server started at richi" + PORT);
 })
