@@ -20,7 +20,11 @@ const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 // Middleware para permitir todos los orígenes
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost', // Cambia por el dominio de tu frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, // Si usas cookies o autenticación
+}));
 
 app.use(express.json()); // allows us to accept JSON data in the req.body
 
